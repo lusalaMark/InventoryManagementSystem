@@ -1,5 +1,7 @@
+using InventoryManagementSystem.InMemory;
 using InventoryManagementSystem.UseCases.Inventories;
 using InventoryManagementSystem.UseCases.Inventories.Interfaces;
+using InventoryManagementSystem.UseCases.PluginInterfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,7 @@ builder.Services.AddTransient<IViewInventoriesByNameUseCase, ViewInventoriesByNa
 builder.Services.AddTransient<IAddInventoryUseCase, AddInventoryUseCase>();
 builder.Services.AddTransient<IEditInventoryUseCase, EditInventoryUseCase>();
 builder.Services.AddTransient<IViewInventoryByIdUseCase, ViewInventoryByIdUseCase>();
+builder.Services.AddSingleton<IInventoryRepository, InventoryRepository>();
 
 var app = builder.Build();
 
