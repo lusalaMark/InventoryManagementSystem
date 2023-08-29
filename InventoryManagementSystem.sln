@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34003.232
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManagementSystem.WebApp", "InventoryManagementSystem.WebApp\InventoryManagementSystem.WebApp.csproj", "{48990026-F5DF-49D4-B354-0AA3865754DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManagementSystem.UseCases", "InventoryManagementSystem.UseCases\InventoryManagementSystem.UseCases.csproj", "{EB79CA1D-B9A8-46BB-9F52-3FFEE02B5988}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{48990026-F5DF-49D4-B354-0AA3865754DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48990026-F5DF-49D4-B354-0AA3865754DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48990026-F5DF-49D4-B354-0AA3865754DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB79CA1D-B9A8-46BB-9F52-3FFEE02B5988}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB79CA1D-B9A8-46BB-9F52-3FFEE02B5988}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB79CA1D-B9A8-46BB-9F52-3FFEE02B5988}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB79CA1D-B9A8-46BB-9F52-3FFEE02B5988}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
