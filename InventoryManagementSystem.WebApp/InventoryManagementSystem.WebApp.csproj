@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\InventoryManagementSystem.CoreBusiness\InventoryManagementSystem.CoreBusiness.csproj" />
+    <ProjectReference Include="..\InventoryManagementSystem.UseCases\InventoryManagementSystem.UseCases.csproj" />
   </ItemGroup>
 
 </Project>
