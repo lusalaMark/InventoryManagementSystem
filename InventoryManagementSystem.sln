@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InventoryManagementSystem.P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManagementSystem.CoreBusiness", "InventoryManagementSystem.CoreBusiness\InventoryManagementSystem.CoreBusiness.csproj", "{9C46537B-76DA-4A99-9F48-E501B7DAACE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManagementSystem.InMemory", "InventoryManagementSystem.InMemory\InventoryManagementSystem.InMemory.csproj", "{A7E4AABC-42CD-4BE0-AFC7-59FE562A7A1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,9 +31,16 @@ Global
 		{9C46537B-76DA-4A99-9F48-E501B7DAACE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C46537B-76DA-4A99-9F48-E501B7DAACE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C46537B-76DA-4A99-9F48-E501B7DAACE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7E4AABC-42CD-4BE0-AFC7-59FE562A7A1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7E4AABC-42CD-4BE0-AFC7-59FE562A7A1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7E4AABC-42CD-4BE0-AFC7-59FE562A7A1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7E4AABC-42CD-4BE0-AFC7-59FE562A7A1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A7E4AABC-42CD-4BE0-AFC7-59FE562A7A1C} = {7B6F11DF-3E51-41E9-8A5D-ACFB827DA28E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B697C808-F93B-4531-8FC8-68F012227901}
