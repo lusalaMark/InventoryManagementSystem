@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManagementSystem.W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManagementSystem.UseCases", "InventoryManagementSystem.UseCases\InventoryManagementSystem.UseCases.csproj", "{EB79CA1D-B9A8-46BB-9F52-3FFEE02B5988}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InventoryManagementSystem.Plugins", "InventoryManagementSystem.Plugins", "{7B6F11DF-3E51-41E9-8A5D-ACFB827DA28E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
