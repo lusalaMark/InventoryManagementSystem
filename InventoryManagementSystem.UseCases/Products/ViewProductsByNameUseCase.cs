@@ -1,14 +1,10 @@
 ﻿using InventoryManagementSystem.CoreBusiness;
 using InventoryManagementSystem.UseCases.PluginInterfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using InventoryManagementSystem.UseCases.Products.Interfaces;
 
 namespace InventoryManagementSystem.UseCases.Products
 {
-    public class ViewProductsByNameUseCase
+    public class ViewProductsByNameUseCase : IViewProductsByNameUseCase
     {
         private readonly IProductRepository productRepository;
 
