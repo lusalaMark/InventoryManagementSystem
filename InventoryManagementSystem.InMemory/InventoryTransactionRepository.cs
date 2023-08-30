@@ -1,10 +1,5 @@
 ﻿using InventoryManagementSystem.CoreBusiness;
 using InventoryManagementSystem.UseCases.PluginInterfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InventoryManagementSystem.InMemory
 {
@@ -30,6 +25,7 @@ namespace InventoryManagementSystem.InMemory
                             (!dateFrom.HasValue || it.TransactionDate >= dateFrom.Value.Date) &&
                             (!dateTo.HasValue || it.TransactionDate <= dateTo.Value.Date) &&
                             (!transactionType.HasValue || it.ActivityType == transactionType)
+
                         select new InventoryTransaction
                         {
                             Inventory = inv,
@@ -81,6 +77,5 @@ namespace InventoryManagementSystem.InMemory
 
             return Task.CompletedTask;
         }
-
     }
 }
