@@ -4,6 +4,8 @@ using InventoryManagementSystem.UseCases.Inventories.Interfaces;
 using InventoryManagementSystem.UseCases.PluginInterfaces;
 using InventoryManagementSystem.UseCases.Products.Interfaces;
 using InventoryManagementSystem.UseCases.Products;
+using InventoryManagementSystem.UseCases.Activities.Interfaces;
+using InventoryManagementSystem.UseCases.Activities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,18 +13,23 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 
+builder.Services.AddSingleton<IInventoryRepository, InventoryRepository>();
+builder.Services.AddSingleton<IProductRepository, ProductRepository>();
+builder.Services.AddSingleton<IInventoryTransactionRepository, InventoryTransactionRepository>();
+
 builder.Services.AddTransient<IViewInventoriesByNameUseCase, ViewInventoriesByNameUseCase>();
 builder.Services.AddTransient<IAddInventoryUseCase, AddInventoryUseCase>();
 builder.Services.AddTransient<IEditInventoryUseCase, EditInventoryUseCase>();
 builder.Services.AddTransient<IViewInventoryByIdUseCase, ViewInventoryByIdUseCase>();
-builder.Services.AddSingleton<IInventoryRepository, InventoryRepository>();
 
 builder.Services.AddTransient<IViewProductsByNameUseCase, ViewProductsByNameUseCase>();
 builder.Services.AddTransient<IAddProductUseCase, AddProductUseCase>();
-builder.Services.AddTransient<IEditProductUseCase, EditProductUseCase>();
 builder.Services.AddTransient<IViewProductByIdUseCase, ViewProductByIdUseCase>();
-builder.Services.AddSingleton<IProductRepository, ProductRepository>();
- 
+builder.Services.AddTransient<IEditProductUseCase, EditProductUseCase>();
+
+builder.Services.AddTransient<IPurchaseInventoryUseCase, PurchaseInventoryUseCase>();
+
+
 
 var app = builder.Build();
 

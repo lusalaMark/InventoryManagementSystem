@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace InventoryManagementSystem.WebApp.Pages.ViewModel
+namespace InventoryManagementSystem.WebApp.ViewModel
 {
     public class PurchaseViewModel
     {

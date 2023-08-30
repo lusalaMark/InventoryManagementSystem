@@ -14,7 +14,6 @@
 
   <ItemGroup>
     <Folder Include="Controls\Common\" />
-    <Folder Include="Pages\Activities\" />
   </ItemGroup>
 
 </Project>
