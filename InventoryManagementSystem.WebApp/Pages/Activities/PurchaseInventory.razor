@@ -24,17 +24,19 @@
     <div class="card">
         <div class="card-body">
             <div class="form-group">
+
                 <AutoCompleteComponent Label="Inventory to Purchase"
                                        SearchFunction="SearchInventory"
                                        OnItemSelected="OnItemSelected">
                 </AutoCompleteComponent>
+
                 <input type="hidden" value="@purchaseViewModel.InventoryId" />
+
                 @if (purchaseViewModel.InventoryId > 0 && purchaseViewModel.InventoryPrice >= 0)
                 {
-                    <text>Price:</text>
-                    @purchaseViewModel.InventoryPrice.ToString("c")
-                    ;
+                    <text>Price:</text> @purchaseViewModel.InventoryPrice.ToString("c");
                 }
+
             </div>
         </div>
     </div>
@@ -53,18 +55,22 @@
 </EditForm>
 
 @code {
-    private PurchaseViewModel purchaseViewModel = new PurchaseViewModel();
-    private Inventory? selectedInventory = null;
 
+    private PurchaseViewModel purchaseViewModel = new PurchaseViewModel();
+
+    private Inventory? selectedInventory;
 
     private async Task Purchase()
     {
-        await PurchaseInventoryUseCase.ExecuteAsync(
-            this.purchaseViewModel.PONumber,
-            this.selectedInventory,
-            this.purchaseViewModel.QuantityToPurchase,
-            "Mark"
-        );
+        if (this.selectedInventory != null)
+        {
+            await PurchaseInventoryUseCase.ExecuteAsync(
+                   this.purchaseViewModel.PONumber,
+                   this.selectedInventory,
+                   this.purchaseViewModel.QuantityToPurchase,
+                    "Mark"
+                      );
+        }
         this.purchaseViewModel = new PurchaseViewModel();
         this.selectedInventory = null;
     }
@@ -78,7 +84,7 @@
     }
 
     private async Task OnItemSelected(ItemViewModel item)
-    {
+    { 
         purchaseViewModel.InventoryId = item.Id;
         purchaseViewModel.InventoryPrice = (await ViewInventoryByIdUseCase.ExecuteAsync(item.Id)).Price;
     }

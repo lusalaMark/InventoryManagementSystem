@@ -1,6 +1,7 @@
 ﻿@inject IViewInventoriesByNameUseCase ViewInventoriesByNameUseCase
  
 <table>
+
     <thead>
         <tr>
             <th>Inventory Name</th>
@@ -9,9 +10,11 @@
             <th>Actions</th>
         </tr>
     </thead>
+
     <tbody>
         <InventoryListItemComponent Inventories="listInventories"></InventoryListItemComponent>
     </tbody>
+
 </table>
  
 @code {

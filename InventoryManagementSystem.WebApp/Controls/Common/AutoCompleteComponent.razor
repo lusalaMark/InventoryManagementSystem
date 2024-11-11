@@ -1,29 +1,54 @@
 ﻿<div class="form-group">
     <label for="search">@Label</label>
-    <input type="text"
-           class="form-control"
-           value="@_userInput"
-    @oninput="@(async (args) => {await OnInput(args);})"
-    @onkeyup="OnPressKeys" />
+    <input type="text" class="form-control" value="@_userInput" @oninput="@(async (args) => {await OnInput(args);})" @onkeyup="OnPressKeys" />
+    <span></span>
 </div>
 
 @if (searchResults != null && searchResults.Count > 0)
 {
     <div class="search-result">
-        <ul>
+
+        <div class="table-wrapper-scroll-y customScrollbar" style="height:99%;  overflow:scroll;" id="table">
+
+        <table class="table table-condensed table-bordered table-striped table-hover w-auto fixed_header ">
+
+            <thead class="bg-info" style="position: sticky;top:0"> 
+                <tr class="noBorder">
+                     <th>Description</th>
+                </tr> 
+            </thead>
+
+            <tbody>
+
+                @foreach (var item in searchResults)
+                {
+                    int itemIndex = 0;
+                    <tr @key="item.Id" class="@(itemIndex == currentItemIndex?"selected":"") noBorder" @onclick="@(()=>OnSelectItem(item))">
+                            <td>@item.Name</td>
+                    </tr>
+                    itemIndex++;
+                }
+
+            </tbody>
+
+        </table>
+
+    </div>
+     
+
+       @*  <ul>
             @{
                 int itemIndex = 0;
                 foreach (var item in searchResults)
                 {
-                    <li @key="item.Id"
-                        class="@(itemIndex == currentItemIndex?"selected":"")"
-                    @onclick="@(()=>OnSelectItem(item))">
+                    <li >
                         @item.Name
                     </li>
                     itemIndex++;
                 }
             }
-        </ul>
+        </ul> *@
+         
     </div>
 }
 

@@ -4,17 +4,22 @@
 <PageTitle>Inventory List</PageTitle>
  
 <h3>InventoryList</h3>
+
 <br />
 <SearchInventoryComponent OnSearchInventory="OnInventorySearch"></SearchInventoryComponent>
+
 <br/>
 <InventoryListComponent SearchTerm="@SearchTerm"></InventoryListComponent>
+
 <br/>
+
 <button 
     type="button"
     class="btn btn-primary"
     @onclick="AddInventory">Add Inventory</button>
  
 @code {
+
     private string SearchTerm = string.Empty;
 
     private void OnInventorySearch(string searchTerm)
@@ -26,4 +31,5 @@
     {
         inventoryNavigate.NavigateTo("/addInventory");
     }
+
 }
